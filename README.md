@@ -1,7 +1,7 @@
 # ConvNet-CatsDogs
 Le cas d'application a été l'objet d'un défi Kaggle (fermé depuis) et a été traité dans l'ouvrage "L'apprentissage profond avec Python" de François Chollet.
 
-L'étude consiste à entrainer un modèle **ConvNet** pour résoudre un problème de classification binaire d'images de chients/chats et propose 3 approches différentes illustrant les notions d'augmentation de données et d'ajout de Dropout pour contrer le sur-apprentissage ainsi que l'apprentissage par transfert par l'utilisation d'un noyau de convolution **VGG16** pré-entrainé .
+L'étude consiste à entrainer un modèle **ConvNet** pour résoudre un problème de classification binaire d'images de chients/chats et propose 3 approches différentes illustrant les notions d'augmentation de données et d'ajout de Dropout pour contrer le sur-apprentissage ainsi que l'apprentissage par transfert par l'utilisation d'un noyau de convolution **VGG16** pré-entrainé.
 
 ## Etapes préliminaires
 1. Télécharger le dataset sur la page du défi [Kaggle Dogs vs Cats](https://www.kaggle.com/c/dogs-vs-cats)
