@@ -44,7 +44,7 @@ history = model.fit(train_generator, steps_per_epoch=100, epochs=30, validation_
 model.save('cats_dogs_small.h5')
 
 """ --- Tracer les courbes d'entrainements --- """
-# Voir 
+# Voir 1_ConvNet_accuracy.png et 1_ConvNet_loss.png
 accuracy = history.history["acc"]
 val_accuracy = history.history["val_acc"]
 loss = history.history["loss"]
