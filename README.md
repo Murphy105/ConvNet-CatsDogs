@@ -2,7 +2,7 @@
 Le cas d'application est issu du livre de François Chollet "L'apprentissage profond avec Python".
 ## Etapes préliminaires
 1. Télécharger le dataset sur la page du défi [Kaggle Dogs vs Cats](https://www.kaggle.com/c/dogs-vs-cats)
-2. Unzipper le répertoire est le mettre sous la forme : dogs-vs-cats ==> test1 + train
+2. Unzipper le répertoire dogs-vs-cats
 3. Splitter vos données training/validation/test avec split_data_training.py
 
 ## Approches d'entrainement
