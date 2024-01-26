@@ -1,3 +1,5 @@
+import matplotlib.pyplot as plt
+
 from keras import layers
 from keras import models
 from keras import optimizers
@@ -40,3 +42,21 @@ history = model.fit(train_generator, steps_per_epoch=100, epochs=30, validation_
 
 """ --- Sauvegarde du modèle à a fin de l'entraînement --- """
 model.save('cats_dogs_small.h5')
+
+""" --- Tracer les courbes d'entrainements --- """
+# Voir 
+accuracy = history.history["acc"]
+val_accuracy = history.history["val_acc"]
+loss = history.history["loss"]
+val_loss = history.history["val_loss"]
+epochs = range(1, len(accuracy) + 1)
+plt.plot(epochs, accuracy, "bo", label="Training accuracy")
+plt.plot(epochs, val_accuracy, "b", label="Validation accuracy")
+plt.title("Training and validation accuracy")
+plt.legend()
+plt.figure()
+plt.plot(epochs, loss, "bo", label="Training loss")
+plt.plot(epochs, val_loss, "b", label="Validation loss")
+plt.title("Training and validation loss")
+plt.legend()
+plt.show()
