@@ -3,6 +3,7 @@ Le cas d'application est issu du livre de François Chollet "L'apprentissage pro
 ## Etapes préliminaires
 1. Télécharger le dataset sur la page du défi [Kaggle Dogs vs Cats](https://www.kaggle.com/c/dogs-vs-cats)
 2. Unzipper le répertoire est le mettre sous la forme : dogs-vs-cats ==> test1 + train
+3. Splitter vos données training/validation/test avec split_data_training.py
 
 ## Approches d'entrainement
 1. ConvNet entrainé à partir de zéro sur un petit jeu de données
