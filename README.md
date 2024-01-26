@@ -6,5 +6,5 @@ Le cas d'application est issu du livre de François Chollet "L'apprentissage pro
 3. Splitter les données en training/validation/test avec split_data_training.py
 
 ## Approches d'entrainement
-1. ConvNet entrainé à partir de zéro sur un petit jeu de données (Convnet_1.py)
+1. ConvNet entrainé à partir de zéro sur un petit jeu de données (1_Convnet.py)
 2. Ajout de l'augmentation de données et de Dropout
