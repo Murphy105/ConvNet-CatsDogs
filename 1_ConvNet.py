@@ -18,7 +18,7 @@ validation_generator = validation_datagen.flow_from_directory(dataset_dir/"valid
 test_generator = test_datagen.flow_from_directory(dataset_dir/"test", target_size = (150,150), batch_size = 20, class_mode = "binary")
 
 """ --- Création du modèle ConvNet --- """
-# Modèle construitsen alternant couche de convolution et couche MaxPool
+# Modèle construits en alternant couche de convolution et couche MaxPool
 model = models.Sequential()
 model.add(layers.Conv2D(32,(3,3),activation='relu',input_shape=(150,150,3)))
 model.add(layers.MaxPool2D((2,2)))
@@ -43,7 +43,7 @@ model.compile(loss='binary_crossentropy',optimizer=optimizers.RMSprop(learning_r
 history = model.fit(train_generator, steps_per_epoch=100, epochs=30, validation_data = validation_generator, validation_steps=50)
 
 """ --- Sauvegarde du modèle à a fin de l'entraînement --- """
-model.save('cats_dogs_small.h5')
+model.save('ConvNet1.h5')
 
 """ --- Tracer les courbes d'entrainements --- """
 # Voir 1_ConvNet_accuracy.png et 1_ConvNet_loss.png
