@@ -9,11 +9,13 @@ from keras.preprocessing.image import ImageDataGenerator
 #  Les données d'entrée sont ramenés à des flottants compris entre 0 et 1
 train_datagen = ImageDataGenerator(rescale=1./255)
 validation_datagen = ImageDataGenerator(rescale=1./255)
+test_datagen = ImageDataGenerator(rescale=1./255)
 # Chemin du dataset
 dataset_dir = pathlib.Path(r"cats_vs_dogs_small")
 # Les images sont redimensionnées à la taille (150x150) et sont générées par lot de 20
 train_generator = train_datagen.flow_from_directory(dataset_dir/"train", target_size = (150,150), batch_size = 20, class_mode = 'binary')
-validation_generator = validation_datagen.flow_from_directory(dataset_dir/"validation", target_size=(150,150), batch_size = 20, class_mode = "binary")
+validation_generator = validation_datagen.flow_from_directory(dataset_dir/"validation", target_size = (150,150), batch_size = 20, class_mode = "binary")
+test_generator = test_datagen.flow_from_directory(dataset_dir/"test", target_size = (150,150), batch_size = 20, class_mode = "binary")
 
 """ --- Création du modèle ConvNet --- """
 # Modèle construitsen alternant couche de convolution et couche MaxPool
@@ -60,3 +62,6 @@ plt.plot(epochs, val_loss, "b", label="Validation loss")
 plt.title("Training and validation loss")
 plt.legend()
 plt.show()
+
+""" --- Evaluation du modèle sur le dataset de test --- """
+test_loss, test_acc = model.evaluate(test_generator, steps = 50)
