@@ -13,3 +13,5 @@ Ce cas d'application a été l'objet d'un défi Kaggle (fermé depuis) et a ét�
 1. ConvNet entrainé à partir de zéro sur un petit jeu de données (1_Convnet.py)
 2. Ajout de l'augmentation de données et de Dropout
 3. Utilisation d'un réseau VGG16 pré-entrainé
+
+## Résultats
